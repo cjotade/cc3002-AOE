@@ -1,2 +1,2 @@
-public class Villager implements Unit{
+public class Villager extends Unit{
 }

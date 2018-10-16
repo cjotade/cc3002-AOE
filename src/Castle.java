@@ -1,2 +1,2 @@
-public class Castle implements Building {
+public class Castle extends Building {
 }

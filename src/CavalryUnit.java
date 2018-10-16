@@ -1,2 +1,2 @@
-public class CavalryUnit implements Unit {
+public class CavalryUnit extends Unit {
 }

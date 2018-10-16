@@ -1,4 +1,7 @@
 public interface Attacker extends Attackable {
-    Attacker attack(Attacker entity);
-    float getAttackPoints(Attacker entity);
+    void attack(Attackable opponent);
+    double getAttackPoints(Attackable opponent);
+
+    @Override
+    void setHitPoints(double hitPoints);
 }

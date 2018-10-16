@@ -1,3 +1,3 @@
-public class Monk implements Unit{
+public class Monk extends Unit{
 
 }

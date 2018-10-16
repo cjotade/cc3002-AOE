@@ -1,13 +1,20 @@
 public abstract class Building implements Attackable {
-    float hitPoints;
+    double hitPoints;
+    int attackPower;
 
-    public void setHitPoints(float hitPoints){
+    @Override
+    public void setHitPoints(double hitPoints){
         this.hitPoints = hitPoints;
     }
 
     @Override
-    public float getHitPoints() {
+    public double getHitPoints() {
         return hitPoints;
+    }
+
+    @Override
+    public void decreaseHealth(int attackPower) {
+        hitPoints -= attackPower;
     }
 
 }

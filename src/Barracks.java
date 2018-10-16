@@ -1,3 +1,3 @@
-public class Barracks implements Building {
+public class Barracks extends Building {
 
 }

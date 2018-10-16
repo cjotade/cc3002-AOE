@@ -1,20 +1,37 @@
 public abstract class Unit implements Attacker {
-    float hitPoints;
+    double hitPoints;
+    int attackPower;
 
-    public void setHitPoints(float hitPoints){
+    @Override
+    public void setHitPoints(double hitPoints){
         this.hitPoints = hitPoints;
     }
 
+    public void heal(double additionalHealth){
+        this.hitPoints += additionalHealth;
+    }
+
     @Override
-    public float getHitPoints() {
+    public double getHitPoints() {
         return hitPoints;
     }
 
     @Override
-    public abstract Attacker attack(Attacker entity);
+    public void decreaseHealth(int attackPower) {
+        hitPoints -= attackPower;
+    }
 
     @Override
-    public float getAttackPoints(Attacker entity) {
-        return 0;
+    public void attack(Attackable opponent){
+        opponent.decreaseHealth(attackPower);
     }
+
+    @Override
+    public double getAttackPoints(Attackable opponent) {
+        double beforeAttack = getHitPoints();
+        attack(opponent);
+        return beforeAttack - getHitPoints();
+    }
+
+
 }

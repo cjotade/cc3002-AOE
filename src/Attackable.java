@@ -1,7 +1,10 @@
 public interface Attackable {
-    float getHitPoints();
+    double getHitPoints();
+    void setHitPoints(double hitPoints);
+    void decreaseHealth(int attackPower);
 
     default boolean isAlive(){
         return getHitPoints() != 0;
     }
+
 }

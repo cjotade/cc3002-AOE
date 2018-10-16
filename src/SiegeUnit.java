@@ -1,2 +1,2 @@
-public class SiegeUnit implements Unit {
+public class SiegeUnit extends Unit {
 }

@@ -1,3 +1,3 @@
-public class InfantryUnit implements Unit {
+public class InfantryUnit extends Unit {
 
 }
