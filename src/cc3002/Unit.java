@@ -1,20 +1,7 @@
-public abstract class Unit implements Attacker {
-    double hitPoints;
+package cc3002;
+
+public abstract class Unit extends Entity {
     int attackPower;
-
-    @Override
-    public void setHitPoints(double hitPoints){
-        this.hitPoints = hitPoints;
-    }
-
-    public void heal(double additionalHealth){
-        this.hitPoints += additionalHealth;
-    }
-
-    @Override
-    public double getHitPoints() {
-        return hitPoints;
-    }
 
     @Override
     public void decreaseHealth(int attackPower) {
@@ -33,5 +20,8 @@ public abstract class Unit implements Attacker {
         return beforeAttack - getHitPoints();
     }
 
+    public void heal(double additionalHealth){
+        this.hitPoints += additionalHealth;
+    }
 
 }
