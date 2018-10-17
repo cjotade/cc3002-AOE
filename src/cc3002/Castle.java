@@ -6,12 +6,12 @@ public class Castle extends Building implements Attacker {
         super(hitPoints,attackPower);
     }
 
-
+    /*
     @Override
     public double getAttackPoints() {
         return attackPower;
     }
-
+    */
     @Override
     public void attack(Attackable opponent){
         opponent.attackByCastle(this);
@@ -19,37 +19,42 @@ public class Castle extends Building implements Attacker {
 
     @Override
     public void attackByCastle(Castle castle){
-        this.hitPoints -= 0.1*castle.attackPower;
+        setHitPoints(getHitPoints()-0.1*castle.getAttackPower());
     }
 
     @Override
     public void attackByInfantryUnit(InfantryUnit infantry){
-        this.hitPoints -= 0.3*infantry.attackPower;
+        setHitPoints(getHitPoints()-0.3*infantry.getAttackPower());
     }
 
     @Override
     public void attackByArcherUnit(ArcherUnit archer) {
-        this.hitPoints -= 0.1*archer.attackPower;
+        setHitPoints(getHitPoints()-0.1*archer.getAttackPower());
+        //this.hitPoints -= 0.1*archer.attackPower;
     }
 
     @Override
     public void attackByCavalryUnit(CavalryUnit cavalry) {
-        this.hitPoints -= 0.3*cavalry.attackPower;
+        setHitPoints(getHitPoints()-1.2*cavalry.getAttackPower());
+        //this.hitPoints -= 0.3*cavalry.attackPower;
     }
 
     @Override
     public void attackBySiegeUnit(SiegeUnit siege) {
-        this.hitPoints -= 2.0*siege.attackPower;
+        setHitPoints(getHitPoints()-2.0*siege.getAttackPower());
+        //this.hitPoints -= 2.0*siege.attackPower;
     }
 
     @Override
     public void attackByVillager(Villager villager){
-        this.hitPoints += 0.3*villager.attackPower;
+        setHitPoints(getHitPoints()+0.3*villager.getAttackPower());
+        //this.hitPoints += 0.3*villager.attackPower;
     }
 
     @Override
     public void attackByMonk(Monk monk){
-        this.hitPoints += 0;
+        setHitPoints(getHitPoints());
+        //this.hitPoints += 0;
     }
 
 }

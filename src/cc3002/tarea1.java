@@ -12,9 +12,9 @@ public class tarea1 {
         System.out.println(cas1.getHitPoints());
         System.out.println(inf.getHitPoints());
         System.out.println("Attack Power");
-        System.out.println(cas.getAttackPoints());
-        System.out.println(cas1.getAttackPoints());
-        System.out.println(inf.getAttackPoints());
+        System.out.println(cas.getAttackPower());
+        System.out.println(cas1.getAttackPower());
+        System.out.println(inf.getAttackPower());
         //Attack
         cas1.attack(cas);
         inf.attack(cas1);

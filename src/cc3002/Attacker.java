@@ -2,7 +2,8 @@ package cc3002;
 
 public interface Attacker extends Attackable {
     void attack(Attackable opponent);
-    double getAttackPoints();
+    double getAttackPower();
+    void setAttackPower(double attackPower);
 }
 
 
