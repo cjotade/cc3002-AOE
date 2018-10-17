@@ -1,7 +1,8 @@
 package cc3002;
 
-public abstract class Entity implements Attackable,Attacker {
+public abstract class Entity implements Attackable {
     double hitPoints;
+    double attackPower;
 
     public double getHitPoints(){
         return this.hitPoints;

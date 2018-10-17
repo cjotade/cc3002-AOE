@@ -1,23 +1,15 @@
 package cc3002;
 
-public abstract class Unit extends Entity {
-    int attackPower;
+public abstract class Unit extends Entity implements Attacker {
 
-    @Override
-    public void decreaseHealth(int attackPower) {
-        hitPoints -= attackPower;
+    public Unit(double hitPoints,double attackPower){
+        this.hitPoints = hitPoints;
+        this.attackPower = attackPower;
     }
 
     @Override
-    public void attack(Attackable opponent){
-        opponent.decreaseHealth(attackPower);
-    }
-
-    @Override
-    public double getAttackPoints(Attackable opponent) {
-        double beforeAttack = getHitPoints();
-        attack(opponent);
-        return beforeAttack - getHitPoints();
+    public double getAttackPoints() {
+        return attackPower;
     }
 
     public void heal(double additionalHealth){
@@ -25,3 +17,4 @@ public abstract class Unit extends Entity {
     }
 
 }
+

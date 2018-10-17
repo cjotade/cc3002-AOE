@@ -3,7 +3,13 @@ package cc3002;
 public interface Attackable {
     double getHitPoints();
     void setHitPoints(double hitPoints);
-    void decreaseHealth(int attackPower);
+    void attackByInfantryUnit(InfantryUnit infantry);
+    void attackByCastle(Castle castle);
+    void attackByArcherUnit(ArcherUnit archer);
+    void attackByCavalryUnit(CavalryUnit cavalry);
+    void attackBySiegeUnit(SiegeUnit siege);
+    void attackByVillager(Villager villager);
+    void attackByMonk(Monk monk);
 
     default boolean isAlive(){
         return getHitPoints() != 0;

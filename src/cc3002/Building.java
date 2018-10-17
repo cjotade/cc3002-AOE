@@ -1,29 +1,14 @@
 package cc3002;
 
 public abstract class Building extends Entity {
-    int attackPower;
 
-    @Override
-    public void setHitPoints(double hitPoints){
+    public Building(double hitPoints) {
         this.hitPoints = hitPoints;
     }
 
-    @Override
-    public void attack(Attackable opponent){
-        opponent.decreaseHealth(attackPower);
+    public Building(double hitPoints, double attackPower){
+        this.hitPoints = hitPoints;
+        this.attackPower = attackPower;
     }
-
-    @Override
-    public void decreaseHealth(int attackPower) {
-        hitPoints -= attackPower;
-    }
-
-    @Override
-    public double getAttackPoints(Attackable opponent) {
-        double beforeAttack = getHitPoints();
-        attack(opponent);
-        return beforeAttack - getHitPoints();
-    }
-
 }
 
