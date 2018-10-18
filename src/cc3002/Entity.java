@@ -5,7 +5,7 @@ public abstract class Entity implements Attackable {
     private double attackPower;
 
     public double getHitPoints(){
-        return this.hitPoints;
+        return hitPoints;
     }
 
     public void setHitPoints(double hitPoints){

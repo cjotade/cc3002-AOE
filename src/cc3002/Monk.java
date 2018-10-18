@@ -13,43 +13,36 @@ public class Monk extends Unit{
 
     @Override
     public void attackByInfantryUnit(InfantryUnit infantry) {
-        //this.hitPoints = 0;
-        setHitPoints(getHitPoints());
+        setHitPoints(0);
     }
 
     @Override
     public void attackByCastle(Castle castle) {
-        //this.hitPoints = 0;
-        setHitPoints(getHitPoints());
+        setHitPoints(0);
     }
 
     @Override
     public void attackByArcherUnit(ArcherUnit archer) {
-        //this.hitPoints = 0;
-        setHitPoints(getHitPoints());
+        setHitPoints(0);
     }
 
     @Override
     public void attackByCavalryUnit(CavalryUnit cavalry) {
-        //this.hitPoints = 0;
-        setHitPoints(getHitPoints());
+        setHitPoints(0);
     }
 
     @Override
     public void attackBySiegeUnit(SiegeUnit siege) {
-        //this.hitPoints = 0;
-        setHitPoints(getHitPoints());
+        setHitPoints(0);
     }
 
     @Override
     public void attackByVillager(Villager villager){
-        //this.hitPoints += 0;
         setHitPoints(getHitPoints());
     }
 
     @Override
     public void attackByMonk(Monk monk){
-        //this.hitPoints += 0.5*monk.attackPower;
         setHitPoints(getHitPoints()+0.5*monk.getAttackPower());
     }
 }
