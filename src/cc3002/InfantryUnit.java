@@ -1,7 +1,10 @@
 package cc3002;
 
 public class InfantryUnit extends Unit {
-
+    public InfantryUnit(){
+        setHitPoints(45);
+        setAttackPower(6);
+    }
     public InfantryUnit(double hitPoints, double attackPower){
         super(hitPoints,attackPower);
     }

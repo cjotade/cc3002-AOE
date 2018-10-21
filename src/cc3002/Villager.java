@@ -1,6 +1,10 @@
 package cc3002;
 
 public class Villager extends Unit{
+    public Villager() {
+        setHitPoints(25);
+        setAttackPower(3);
+    }
     public Villager(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }

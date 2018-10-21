@@ -20,4 +20,7 @@ public abstract class Entity implements Attackable {
         this.attackPower = attackPower;
     }
 
+    public boolean isAlive(){
+        return getHitPoints() != 0;
+    }
 }

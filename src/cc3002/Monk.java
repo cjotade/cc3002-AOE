@@ -1,6 +1,10 @@
 package cc3002;
 
 public class Monk extends Unit{
+    public Monk() {
+        setHitPoints(30);
+        setAttackPower(9);
+    }
 
     public Monk(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);

@@ -1,6 +1,10 @@
 package cc3002;
 
 public class CavalryUnit extends Unit {
+    public CavalryUnit() {
+        setHitPoints(100);
+        setAttackPower(10);
+    }
     public CavalryUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }

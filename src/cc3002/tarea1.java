@@ -24,7 +24,7 @@ public class tarea1 {
         System.out.println(cas1.getHitPoints());
         System.out.println(inf.getHitPoints());
         System.out.println(cas.isAlive());
-        cas.setHitPoints(10);
+        cas.setHitPoints(0);
         System.out.println(cas.getHitPoints());
         System.out.println(cas.isAlive());
         cas.attack(bar);
@@ -34,6 +34,17 @@ public class tarea1 {
         System.out.println(inf.getHitPoints());
         cas1.attack(monk);
         System.out.println(monk.getHitPoints());
+        InfantryUnit inf1 = new InfantryUnit();
+        System.out.println(inf1.getHitPoints());
+        System.out.println(inf1.getAttackPower());
+        ArcherUnit archer1 = new ArcherUnit();
+        ArcherUnit archer2 = new ArcherUnit();
+        System.out.println(archer2.getHitPoints());
+        System.out.println(archer2.getAttackPower());
+        archer1.attack(archer2);
+        System.out.println(archer2.getHitPoints());
+        System.out.println(archer2.getAttackPower());
+
     }
 }
 

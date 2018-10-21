@@ -1,6 +1,10 @@
 package cc3002;
 
 public class ArcherUnit extends Unit {
+    public ArcherUnit() {
+        setHitPoints(30);
+        setAttackPower(4);
+    }
     public ArcherUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }

@@ -10,9 +10,6 @@ public interface Attackable {
     void attackBySiegeUnit(SiegeUnit siege);
     void attackByVillager(Villager villager);
     void attackByMonk(Monk monk);
-
-    default boolean isAlive(){
-        return getHitPoints() != 0;
-    }
+    boolean isAlive();
 
 }

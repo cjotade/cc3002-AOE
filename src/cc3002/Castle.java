@@ -2,6 +2,11 @@ package cc3002;
 
 public class Castle extends Building implements Attacker {
 
+    public Castle() {
+        setHitPoints(4800);
+        setAttackPower(11);
+    }
+
     public Castle(double hitPoints, double attackPower){
         super(hitPoints,attackPower);
     }

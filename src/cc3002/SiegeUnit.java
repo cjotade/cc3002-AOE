@@ -1,6 +1,10 @@
 package cc3002;
 
 public class SiegeUnit extends Unit {
+    public SiegeUnit() {
+        setHitPoints(60);
+        setAttackPower(50);
+    }
 
     public SiegeUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
