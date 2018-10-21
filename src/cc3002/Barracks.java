@@ -1,11 +1,24 @@
 package cc3002;
 
+/**
+ * Class for a Barracks.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class Barracks extends Building {
+    /**
+     * Constructor for a default Barrack.
+     */
     public Barracks() {
         setHitPoints(1500);
         setMaxHitPoints(getHitPoints());
     }
 
+    /**
+     * Constructor for a Barrack setting its hit points.
+     *
+     * @param hitPoints the hit points of the Barrack.
+     */
     public Barracks(double hitPoints){
         super(hitPoints);
     }

@@ -1,5 +1,10 @@
 package cc3002;
 
+/**
+ * Entity that represents the architecture of a Building or a Unit.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public abstract class Entity implements Attackable {
     private double hitPoints;
     private double attackPower;

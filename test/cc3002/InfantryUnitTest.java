@@ -1,6 +1,7 @@
 package cc3002;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class InfantryUnitTest extends cc3002.Test {

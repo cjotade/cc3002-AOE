@@ -1,13 +1,26 @@
 package cc3002;
 
+/**
+ *  Class for a Castle.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class Castle extends Building implements Attacker {
-
+    /**
+     * Constructor for a default Castle.
+     */
     public Castle() {
         setHitPoints(4800);
         setAttackPower(11);
         setMaxHitPoints(getHitPoints());
     }
 
+    /**
+     * Constructor for a Castle setting its hit points and attack power.
+     *
+     * @param hitPoints the hit points of the Castle.
+     * @param attackPower the attack power of the Castle.
+     */
     public Castle(double hitPoints, double attackPower){
         super(hitPoints,attackPower);
     }

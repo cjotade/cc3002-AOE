@@ -1,11 +1,26 @@
 package cc3002;
 
+/**
+ * Class for a InfantryUnit.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class InfantryUnit extends Unit {
+    /**
+     * Constructor for a default InfantryUnit.
+     */
     public InfantryUnit(){
         setHitPoints(45);
         setAttackPower(6);
         setMaxHitPoints(2*getHitPoints());
     }
+
+    /**
+     * Constructor for a InfantryUnit setting its hit points and attack power.
+     *
+     * @param hitPoints
+     * @param attackPower
+     */
     public InfantryUnit(double hitPoints, double attackPower){
         super(hitPoints,attackPower);
     }

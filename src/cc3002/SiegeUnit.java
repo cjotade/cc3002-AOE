@@ -1,12 +1,25 @@
 package cc3002;
 
+/**
+ * Class for a SiegeUnit.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class SiegeUnit extends Unit {
+    /**
+     * Constructor for a default SiegeUnit.
+     */
     public SiegeUnit() {
         setHitPoints(60);
         setAttackPower(50);
         setMaxHitPoints(this.getHitPoints());
     }
 
+    /**
+     * Constructor for a SiegeUnit setting its hit points and attack power.
+     * @param hitPoints
+     * @param attackPower
+     */
     public SiegeUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }

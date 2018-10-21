@@ -1,11 +1,26 @@
 package cc3002;
 
+/**
+ * Class for an ArcherUnit.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class ArcherUnit extends Unit {
+    /**
+     * Constructor for a default ArcherUnit.
+     */
     public ArcherUnit() {
         setHitPoints(30);
         setAttackPower(4);
         setMaxHitPoints(2*getHitPoints());
     }
+
+    /**
+     * Constructor for a ArcherUnit setting its hit points and attack power.
+     *
+     * @param hitPoints the hit points of the ArcherUnit.
+     * @param attackPower the attack power of the ArcherUnit.
+     */
     public ArcherUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }

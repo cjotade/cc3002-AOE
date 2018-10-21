@@ -1,11 +1,26 @@
 package cc3002;
 
+/**
+ * Class for a Villager.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class Villager extends Unit{
+    /**
+     * Constructor for a default Villager.
+     */
     public Villager() {
         setHitPoints(25);
         setAttackPower(3);
         setMaxHitPoints(2*getHitPoints());
     }
+
+    /**
+     * Constructor for a Villager setting its hit points and attack power.
+     *
+     * @param hitPoints
+     * @param attackPower
+     */
     public Villager(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }

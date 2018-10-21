@@ -1,11 +1,25 @@
 package cc3002;
 
+/**
+ * Class for a CavalryUnit.
+ *
+ * @author Camilo Jara Do Nascimento.
+ */
 public class CavalryUnit extends Unit {
+    /**
+     * Constructor for a default CavalryUnit.
+     */
     public CavalryUnit() {
         setHitPoints(100);
         setAttackPower(10);
         setMaxHitPoints(2*getHitPoints());
     }
+
+    /**
+     * Constructor for a CavalryUnit setting its hit points and attack power.
+     * @param hitPoints
+     * @param attackPower
+     */
     public CavalryUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
     }
