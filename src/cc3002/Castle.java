@@ -5,6 +5,7 @@ public class Castle extends Building implements Attacker {
     public Castle() {
         setHitPoints(4800);
         setAttackPower(11);
+        setMaxHitPoints(getHitPoints());
     }
 
     public Castle(double hitPoints, double attackPower){
@@ -13,7 +14,10 @@ public class Castle extends Building implements Attacker {
 
     @Override
     public void attack(Attackable opponent){
-        opponent.attackByCastle(this);
+        if(isAlive()) {
+            opponent.attackByCastle(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override

@@ -4,6 +4,7 @@ public class Monk extends Unit{
     public Monk() {
         setHitPoints(30);
         setAttackPower(9);
+        setMaxHitPoints(2*getHitPoints());
     }
 
     public Monk(double hitPoints, double attackPower) {
@@ -12,7 +13,10 @@ public class Monk extends Unit{
 
     @Override
     public void attack(Attackable opponent) {
-        opponent.attackByMonk(this);
+        if(isAlive()) {
+            opponent.attackByMonk(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override

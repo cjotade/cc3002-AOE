@@ -4,6 +4,7 @@ public class ArcherUnit extends Unit {
     public ArcherUnit() {
         setHitPoints(30);
         setAttackPower(4);
+        setMaxHitPoints(2*getHitPoints());
     }
     public ArcherUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
@@ -11,7 +12,10 @@ public class ArcherUnit extends Unit {
 
     @Override
     public void attack(Attackable opponent) {
-        opponent.attackByArcherUnit(this);
+        if(isAlive()) {
+            opponent.attackByArcherUnit(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override

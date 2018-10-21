@@ -4,6 +4,7 @@ public class InfantryUnit extends Unit {
     public InfantryUnit(){
         setHitPoints(45);
         setAttackPower(6);
+        setMaxHitPoints(2*getHitPoints());
     }
     public InfantryUnit(double hitPoints, double attackPower){
         super(hitPoints,attackPower);
@@ -11,7 +12,10 @@ public class InfantryUnit extends Unit {
 
     @Override
     public void attack(Attackable opponent){
-        opponent.attackByInfantryUnit(this);
+        if(isAlive()) {
+            opponent.attackByInfantryUnit(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override

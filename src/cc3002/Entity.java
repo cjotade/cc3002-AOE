@@ -3,6 +3,7 @@ package cc3002;
 public abstract class Entity implements Attackable {
     private double hitPoints;
     private double attackPower;
+    private double maxHitPoints;
 
     public double getHitPoints(){
         return hitPoints;
@@ -10,6 +11,14 @@ public abstract class Entity implements Attackable {
 
     public void setHitPoints(double hitPoints){
         this.hitPoints = hitPoints;
+    }
+
+    public void setMaxHitPoints(double maxHitPoints){
+        this.maxHitPoints = maxHitPoints;
+    }
+
+    public double getMaxHitPoints(){
+        return maxHitPoints;
     }
 
     public double getAttackPower() {
@@ -21,6 +30,21 @@ public abstract class Entity implements Attackable {
     }
 
     public boolean isAlive(){
-        return getHitPoints() != 0;
+        return getHitPoints() > 0;
     }
+
+    public boolean isMaxHitPoints(){
+        return getMaxHitPoints() < getHitPoints();
+    }
+
+    public void setLimitHitPoints(){
+        if(!isAlive()){
+            setHitPoints(0);
+        }
+        if(isMaxHitPoints()){
+            setHitPoints(getMaxHitPoints());
+        }
+    }
+
+
 }

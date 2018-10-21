@@ -4,6 +4,7 @@ public class Villager extends Unit{
     public Villager() {
         setHitPoints(25);
         setAttackPower(3);
+        setMaxHitPoints(2*getHitPoints());
     }
     public Villager(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
@@ -11,7 +12,10 @@ public class Villager extends Unit{
 
     @Override
     public void attack(Attackable opponent){
-        opponent.attackByVillager(this);
+        if(isAlive()) {
+            opponent.attackByVillager(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override

@@ -4,6 +4,7 @@ public class CavalryUnit extends Unit {
     public CavalryUnit() {
         setHitPoints(100);
         setAttackPower(10);
+        setMaxHitPoints(2*getHitPoints());
     }
     public CavalryUnit(double hitPoints, double attackPower) {
         super(hitPoints, attackPower);
@@ -11,7 +12,10 @@ public class CavalryUnit extends Unit {
 
     @Override
     public void attack(Attackable opponent) {
-        opponent.attackByCavalryUnit(this);
+        if(isAlive()) {
+            opponent.attackByCavalryUnit(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override

@@ -3,6 +3,7 @@ package cc3002;
 public class Barracks extends Building {
     public Barracks() {
         setHitPoints(1500);
+        setMaxHitPoints(getHitPoints());
     }
 
     public Barracks(double hitPoints){

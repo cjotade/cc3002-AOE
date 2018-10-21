@@ -27,18 +27,18 @@ public class VillagerTest extends cc3002.Test {
         assertEquals(defaultArcherUnit.getHitPoints(),27,0.01);
         assertEquals(defaultInfantryUnit.getHitPoints(),42.6,0.01);
         assertEquals(defaultCavalryUnit.getHitPoints(),98.5,0.01);
-        assertEquals(defaultSiegeUnit.getHitPoints(),61.5,0.01);
+        assertEquals(defaultSiegeUnit.getHitPoints(),60,0.01);
         assertEquals(defaultVillager.getHitPoints(),22,0.01);
         assertEquals(defaultMonk.getHitPoints(),30,0.01);
-        assertEquals(defaultCastle.getHitPoints(),4800.9,0.01);
-        assertEquals(defaultBarracks.getHitPoints(),1502.1,0.01);
+        assertEquals(defaultCastle.getHitPoints(),4800,0.01);
+        assertEquals(defaultBarracks.getHitPoints(),1500,0.01);
         assertEquals(archerUnit.getHitPoints(),90,0.01);
         assertEquals(infantryUnit.getHitPoints(),92,0.01);
         assertEquals(cavalryUnit.getHitPoints(),95,0.01);
         assertEquals(siegeUnit.getHitPoints(),105,0.01);
         assertEquals(villager.getHitPoints(),90,0.01);
         assertEquals(monk.getHitPoints(),100,0.01);
-        assertEquals(castle.getHitPoints(),103,0.01);
-        assertEquals(barracks.getHitPoints(),107,0.01);
+        assertEquals(castle.getHitPoints(),100,0.01);
+        assertEquals(barracks.getHitPoints(),100,0.01);
     }
 }

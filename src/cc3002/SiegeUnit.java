@@ -4,6 +4,7 @@ public class SiegeUnit extends Unit {
     public SiegeUnit() {
         setHitPoints(60);
         setAttackPower(50);
+        setMaxHitPoints(this.getHitPoints());
     }
 
     public SiegeUnit(double hitPoints, double attackPower) {
@@ -13,7 +14,10 @@ public class SiegeUnit extends Unit {
 
     @Override
     public void attack(Attackable opponent) {
-        opponent.attackBySiegeUnit(this);
+        if(isAlive()) {
+            opponent.attackBySiegeUnit(this);
+            opponent.setLimitHitPoints();
+        }
     }
 
     @Override
