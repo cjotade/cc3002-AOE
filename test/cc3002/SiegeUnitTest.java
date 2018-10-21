@@ -10,12 +10,11 @@ public class SiegeUnitTest extends cc3002.Test {
         defaultSiegeUnit.attack(defaultArcherUnit);
         defaultSiegeUnit.attack(defaultInfantryUnit);
         defaultSiegeUnit.attack(defaultCavalryUnit);
-        //defaultSiegeUnit.attack(defaultSiegeUnit);
-        System.out.println(defaultVillager.getHitPoints());
         defaultSiegeUnit.attack(defaultVillager);
         defaultSiegeUnit.attack(defaultMonk);
         defaultSiegeUnit.attack(defaultCastle);
         defaultSiegeUnit.attack(defaultBarracks);
+        defaultSiegeUnit.attack(defaultSiegeUnit);
         siegeUnit.attack(archerUnit);
         siegeUnit.attack(infantryUnit);
         siegeUnit.attack(cavalryUnit);
@@ -27,8 +26,7 @@ public class SiegeUnitTest extends cc3002.Test {
         assertEquals(defaultArcherUnit.getHitPoints(),0,0.01);
         assertEquals(defaultInfantryUnit.getHitPoints(),0,0.01);
         assertEquals(defaultCavalryUnit.getHitPoints(),50,0.01);
-        //assertEquals(defaultSiegeUnit.getHitPoints(),-15,0.01);
-        System.out.println(defaultVillager.getHitPoints());
+        assertEquals(defaultSiegeUnit.getHitPoints(),0,0.01);
         assertEquals(defaultVillager.getHitPoints(),0,0.01);
         assertEquals(defaultMonk.getHitPoints(),0,0.01);
         assertEquals(defaultCastle.getHitPoints(),4700,0.01);
