@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SiegeUnitTest extends cc3002.Test {
+
     @Test
     public void testAttacks() {
         defaultSiegeUnit.attack(defaultArcherUnit);
